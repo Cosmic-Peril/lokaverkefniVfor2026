@@ -1,0 +1,24 @@
+<%- include("partials/header") %>
+
+<h1><%= disorder.name %></h1>
+
+<div class="info">
+<p><%= disorder.info %></p>
+</div>
+
+<h2>Symptoms</h2>
+
+<div class="symptoms">
+
+<% disorder.symptoms.forEach(symptom => { %>
+
+<div class="symptom">
+<div class="icon"></div>
+<p><%= symptom %></p>
+</div>
+
+<% }) %>
+
+</div>
+
+<%- include("partials/footer") %>
