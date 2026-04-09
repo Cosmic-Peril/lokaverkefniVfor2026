@@ -135,3 +135,11 @@ app.get("/disorder/:id", (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
+
+
+app.use(express.static(path.join(__dirname, '../public')));
+
+app.use(express.urlencoded({ extended: true }));
+
+app.use('/', disorderRoutes);
+
